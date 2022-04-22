@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+			"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.mulcam.bank.dao.AccountDAO">
+	<select id="queryAccount" resultType="Account" parameterType="String">
+		<![CDATA[
+			select * from account where id=#{id}
+		]]>
+	</select>
+	<select id="accountList" resultType="Account">
+		<![CDATA[
+			select * from account order by id
+		]]>
+	</select>
+	<insert id="insertAccount" parameterType="Account">
+		<![CDATA[
+			insert into account values(#{id},#{name},#{balance},#{grade},#{type})
+		]]>
+	</insert>
+	<update id="updateAccount" parameterType="Account">
+		<![CDATA[
+			update account set balance=#{balance} where id=#{id}
+		]]>
+	</update>
+</mapper>

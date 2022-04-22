@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+			"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mulcam.bank.dao.AccountDAO">
+	<select id="queryAccount" resultType="account" parameterType="String">
+		<!-- 쿼리문만들 때 DDATA무조건 만들어 줘야함 -->
+		<![CDATA[
+			select * from account2 where id=#{id}
+			
+		]]>
+	<!--첫번째 id는 accountdao의 queryaccount의 변수명과 같아야함  -->
+	</select>
+	
+	<select id="accountList" resultType="account" >
+		<![CDATA[
+			select * from account2 order by id
+		]]>
+	</select>
+	
+	<insert id="insertAccount" parameterType="account">
+		<![CDATA[
+			insert into account2 (id,password,name1,name,balance,type,grade,bank) 
+				values(#{id},#{password},#{name1},#{name},#{balance},#{type},#{grade},"멀캠")
+		]]>
+	</insert>
+	
+ 	<update id="updateAccount" parameterType="account">
+		<![CDATA[
+		update account2 set balance=#{balance} where id=#{id}
+		]]>
+	</update>
+	
+
+	
+</mapper>

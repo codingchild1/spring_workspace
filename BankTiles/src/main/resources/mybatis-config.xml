@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" 
+	"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<!--xml에 필요한 태그 정의(마이바티스 관련)-->
+
+<!--마이바티스란? sql문을 mapper라는 태그형태로 구현하여 별도로 DB에 접근하는 프레임워크-->
+<configuration>
+	<mappers>
+		<mapper resource="mybatis/mappers/account.xml"/>
+		<!--account와 관련된 마이바티스 mapper 태그를 정의한 xml 파일을 리소스로 연결-->
+		<mapper resource="mybatis/mappers/member.xml"/>
+	</mappers>
+</configuration>

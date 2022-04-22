@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+"-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+"http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+<tiles-definitions>
+   <definition name="baseLayout"  template="/WEB-INF/views/bankmain.jsp">
+      <put-attribute name="title" value="" />
+      <put-attribute name="header" value="/WEB-INF/views/header.jsp" ></put-attribute>
+      <put-attribute name="body" value="" />
+   </definition>
+
+   <definition name="main" extends="baseLayout">
+      <put-attribute name="title" value="메인페이지" />
+      <put-attribute name="body" value="/WEB-INF/views/login.jsp" />
+   </definition>
+
+   <definition name="/makeaccountForm" extends="baseLayout">
+      <put-attribute name="title" value="계좌개설" />
+      <put-attribute name="body" value="/WEB-INF/views/makeaccount.jsp" />
+   </definition>
+    
+   <definition name="/depositForm" extends="baseLayout">
+      <put-attribute name="title" value="계좌입금" />
+      <put-attribute name="body" value="/WEB-INF/views/deposit.jsp" />
+   </definition>
+   
+   <definition name="/withdrawForm" extends="baseLayout">
+      <put-attribute name="title" value="계좌출금" />
+      <put-attribute name="body" value="/WEB-INF/views/withdraw.jsp" />
+   </definition>
+   
+   <definition name="/accinfoForm" extends="baseLayout">
+      <put-attribute name="title" value="계좌조회" />
+      <put-attribute name="body" value="/WEB-INF/views/accinfo.jsp" />
+   </definition>
+   
+   <definition name="/allaccinfoForm" extends="baseLayout">
+      <put-attribute name="title" value="전체계좌조회" />
+      <put-attribute name="body" value="/WEB-INF/views/allaccinfo.jsp" />
+   </definition>
+   
+   <definition name="/loginForm" extends="baseLayout">
+      <put-attribute name="title" value="로그인" />
+      <put-attribute name="body" value="/WEB-INF/views/login.jsp" />
+   </definition>
+   
+   <definition name="/joinForm" extends="baseLayout">
+      <put-attribute name="title" value="회원가입" />
+      <put-attribute name="body" value="/WEB-INF/views/join.jsp" />
+   </definition>
+   
+   <definition name="/err" extends="baseLayout">
+   	  <put-attribute name="title" value="오류창" />
+      <put-attribute name="body" value="/WEB-INF/views/err.jsp" />
+   </definition>
+      
+<!-- 
+   <definition name="/member/memberForm" extends="baseLayout">
+      <put-attribute name="title" value="회원등록창" />
+      <put-attribute name="body" value="/WEB-INF/views/member/memberForm.jsp" />
+   </definition>
+
+   <definition name="/member/viewDetail" extends="baseLayout">
+      <put-attribute name="title" value="회원상세창" />
+      <put-attribute name="body" value="/WEB-INF/views/member/viewDetail.jsp" />
+   </definition> -->
+</tiles-definitions>
